@@ -1,0 +1,39 @@
+<!--
+
+@element <%= name %>
+
+# `<<%= name %>>`
+
+## Attributes
+
+## Methods
+
+## Events
+
+-->
+
+<!--
+
+@example default
+
+<<%= name %>></<%= name %>>
+
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="<%= name %>" attributes="">
+
+  <template>
+    <style>:host {}</style>
+    <content></content>
+  </template>
+
+  <script>
+    (function () {
+      Polymer('<%= name %>', {
+      });
+    })();
+  </script>
+
+</polymer-element>

@@ -1,0 +1,24 @@
+{
+  "name": "generator-zorro",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zorro-html/zorro-generator.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Jinjiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zorro-html/zorro-generator/issues"
+  },
+  "homepage": "https://github.com/zorro-html/zorro-generator",
+  "dependencies": {
+    "yeoman-generator": "^0.19.2"
+  }
+}

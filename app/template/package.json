@@ -1,0 +1,19 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= name %> element in zorro",
+  "main": "<%= name %>.html",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zorro-html/<%= name %>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zorro-html/<%= name %>/issues"
+  },
+  "homepage": "https://github.com/zorro-html/<%= name %>",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jshint": "^1.10.0",
+    "package": "^1.0.1"
+  }
+}
