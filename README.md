@@ -1,6 +1,6 @@
 # generator-zorro
 
-A yeoman generator which help you create [zorro](https://github.com/zorro-html/zorro) component easily.
+A yeoman generator which help you create [Zorro](https://github.com/zorro-html/zorro) component easily.
 
 ## Installation
 
@@ -12,3 +12,25 @@ A yeoman generator which help you create [zorro](https://github.com/zorro-html/z
 - `mkdir z-foo`
 - `yo zorro` and confirm your component name (`z-foo`)
 - That's it!
+
+## Zorro Component Dev
+
+### init
+
+- `npm install -g bower`
+- `npm install`
+- `bower install`
+
+### Dev
+
+- modify `package.json` just like author, lisence ...
+- write bower deps on other components (if has)
+- write `z-foo.html` (both doc comment, sample comment and code)
+- write test case in `test` folder
+- run `gulp` to lint and build `README.md` automatically
+
+### Depoly
+
+- generate semver tag
+- push into your own repo
+- create an [issue](https://github.com/zorro-html/zorro/issues) here to tell us
