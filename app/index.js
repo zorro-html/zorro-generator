@@ -2,13 +2,8 @@ var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend({
 
-  // The name `constructor` is important here
   constructor: function () {
-    // Calling the super constructor is important so our generator is correctly set up
     generators.Base.apply(this, arguments);
-
-    // Next, add your custom code
-    // this.option('coffee'); // This method adds support for a `--coffee` flag
   },
 
   prompting: function () {
@@ -17,10 +12,15 @@ module.exports = generators.Base.extend({
       type    : 'input',
       name    : 'name',
       message : 'Your component name',
-      store   : true,
-      default : this.appname // Default to current folder name
+      default : this.appname
     }, function (answers) {
-      this.log(answers.name);
+      var name = answers.name;
+
+      name = name.replace(/\s+/g, '-');
+
+      this.config.set('name', name);
+      this.name = name;
+
       done();
     }.bind(this));
   },
@@ -37,10 +37,14 @@ module.exports = generators.Base.extend({
       this.copy('gulpfile.js');
     },
     package: function () {
-      this.template('package.json', 'package.json');
+      this.template('package.json');
     },
     main: function () {
       var name = this.config.get('name');
+
+      var capname = name.replace(/^z-/, '').toUpperCase();
+      this.capname = capname;
+
       this.template('demo.html');
       this.template('z-foo.html', name + '.html');
     }
