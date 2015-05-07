@@ -39,13 +39,18 @@ module.exports = generators.Base.extend({
     package: function () {
       this.template('package.json');
     },
+    test: function () {
+      this.mkdir('test');
+      this.template('test/index.html');
+      this.template('test/basic.html');
+    },
     main: function () {
       var name = this.config.get('name');
 
       var capname = name.replace(/^z-/, '').toUpperCase();
       this.capname = capname;
 
-      this.template('demo.html');
+      this.template('index.html');
       this.template('z-foo.html', name + '.html');
     }
   }

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<title>Zorro <%= capname %></title>
+
+<script src="../../webcomponentsjs/webcomponents.js"></script>
+<script src="../../web-component-tester/browser.js"></script>
+<link rel="import" href="../<%= name %>.html">
+
+</head>
+<body>
+
+<z-<%= name %>></<%= name %>>
+
+<script>
+  describe('element init', function () {
+
+    it('should have an element named <%= name %>', function () {
+        var el = document.querySelector('<%= name %>');
+        expect(el).is.an.instanceof(HTMLElement);
+    });
+  });
+</script>
+
+</body>
+</html>
