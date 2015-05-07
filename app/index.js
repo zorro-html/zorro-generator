@@ -18,6 +18,9 @@ module.exports = generators.Base.extend({
 
       name = name.replace(/\s+/g, '-');
 
+      var capname = name.replace(/^z-/, '').toUpperCase();
+      this.capname = capname;
+
       this.config.set('name', name);
       this.name = name;
 
@@ -46,9 +49,6 @@ module.exports = generators.Base.extend({
     },
     main: function () {
       var name = this.config.get('name');
-
-      var capname = name.replace(/^z-/, '').toUpperCase();
-      this.capname = capname;
 
       this.template('index.html');
       this.template('z-foo.html', name + '.html');
